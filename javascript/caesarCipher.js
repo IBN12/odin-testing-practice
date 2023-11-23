@@ -72,29 +72,4 @@ function caesarCipher(nString, nShift){
 
     return nStringShift;
 }
-
-console.log("made no bully"); // Testing
-caesarCipher('made no bully', 1);
-console.log('\n'); // Testing
-
-console.log('go to the zoo'); // Testing
-caesarCipher('go to the zoo', 3);
-console.log('\n'); // Testing 
-
-console.log('the zen man'); // Testing
-caesarCipher('the zen man', 26);
-console.log('\n'); // Testing 
-
-console.log('the zen man'); // Testing 
-caesarCipher('the zen man', 24); 
-console.log('\n'); // Testing 
-
-console.log('World Revolution Movement'); // Testing
-caesarCipher("World Revolution Movement", 2); // Testing
-console.log('\n'); // Testing 
-
-console.log('Hello, World!'); // Testing
-caesarCipher("Hello, World!", 1);
-console.log('\n'); // Testing 
-
 module.exports = caesarCipher;
