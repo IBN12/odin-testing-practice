@@ -6,7 +6,6 @@ const analyzeArray = (nArray) => {
     let minObj = {};
     let maxObj = {};
 
-    console.log('Original Array: ', nArray); // Testing 
     // Remove any duplicates from the array. 
     for(let i = 0; i < nArray.length; i++)
     {
@@ -20,16 +19,14 @@ const analyzeArray = (nArray) => {
             searchIndex++; 
         }
     }
-    console.log('After duplicate check: ', nArray); // Testing
 
-
+    // Calculate the average of the array. 
     nAverage = nArray.reduce((total, curValue) => {
         return total += curValue; 
     });
     nAverage /= nArray.length;
-    // nAverage = nAverage.toFixed(2);
-    console.log(nAverage, " is the average value."); // Testing 
 
+    // Find the minimum in the array. 
     nArray.forEach((item) => {
         let smaller = 0;
         for(let i = 0; i < nArray.length; i++){
@@ -45,9 +42,8 @@ const analyzeArray = (nArray) => {
             nMinimum = item;
         }
     });
-    console.log(nMinimum, " is the minimum value."); // Testing 
-    console.log(minObj); // Testing 
 
+    // Find the maximum in the array. 
     nArray.forEach((item) => {
         let larger = 0;
         for (let i = 0; i < nArray.length; i++)
@@ -64,22 +60,11 @@ const analyzeArray = (nArray) => {
             nMaximum = item;
         }
     });
-    console.log(nMaximum, " is the maximum value."); // Testing
-    console.log(maxObj); // Testing
 
+    // The length of the array. 
     let nLength = nArray.length;
 
     return {nAverage, nMinimum, nMaximum, nLength};
 }
-
-const objOne = analyzeArray([2, 3, 2]); 
-console.log('\n'); // Testing 
-
-const objTwo = analyzeArray([9, 3, 10, 3, 4]);
-console.log('\n'); // Testing 
-
-const objThree = analyzeArray([10, 5, 3, 10, 12, 8]);
-console.log('\n'); // Testing 
-
 module.exports = analyzeArray;
 

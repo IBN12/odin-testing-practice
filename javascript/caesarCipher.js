@@ -13,11 +13,11 @@ function caesarCipher(nString, nShift){
     // split words into array. 
     nStringArr.forEach((item, index) => {
         let itemArr = item.split('');
-        console.log('Item Array: ', itemArr); // Testing
         
-        // test each character from each word. 
+        // Test each character from each word. 
         itemArr.forEach((itemChars) => {
 
+            // Add punctuation to the string shift if the original string one contains it.
             if (itemChars === ',' || itemChars === '.' || itemChars === '!')
             {
                 nStringShift += itemChars;
@@ -28,7 +28,6 @@ function caesarCipher(nString, nShift){
                 {
                     if (itemChars === alphabet[i] || itemChars.toLowerCase() === alphabet[i])
                     {
-                        console.log('Shift by ', nShift); // Testing 
                         let itemIndex = alphabet.indexOf(itemChars.toLowerCase());
     
                         if ((itemIndex + nShift) <= 25)
@@ -64,10 +63,6 @@ function caesarCipher(nString, nShift){
         {
             nStringShift += " ";
         }
-
-        console.log(nStringShift); // Testing
-        console.log('Type: ', typeof(nStringShift)); // Testing
-        console.log('\n'); // Testing
     });
 
     return nStringShift;
